@@ -46,10 +46,13 @@
         <a class="js-scroll-trigger" href="#services">EXPERIÊNCIAS</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
+        <a class="js-scroll-trigger" href="#skills">SKILLS</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">CONTATO</a>
+        <a class="js-scroll-trigger" href="#mapas">ME ENCONTRE AQUI</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#form-contato">CONTATO</a>
       </li>
     </ul>
   </nav>
@@ -58,7 +61,7 @@
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <h1 class="mb-5">Seja bem-vindo!</h1>
-      <h3 class="mb-5" style="font-size: x-large; color: #454545;">Meu nome é <b style="color: white;">GABRIEL IWAMOTO </b>e esta é minha página pessoal.<br/>Caso tenha interesse, me envie um e-mail clicando <a href="mailto:gabriel.iwamoto@leavening.com?subject=Olá" class="link-mod">aqui</a>.<br/>Aqui conto um pouco sobre mim, minha experiência acadêmica e profissional.<h3>
+      <h3 class="mb-5" style="font-size: x-large; color: #454545;">Meu nome é <b style="color: white;">GABRIEL IWAMOTO </b>e esta é minha página pessoal.<br/>Aqui conto um pouco sobre mim, minha experiência acadêmica e profissional. <br/>Caso tenha interesse, me envie um e-mail clicando <a href="#form-contato" class="link-mod">aqui</a>.<br/><h3>
         
       <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Vamos lá !</a>
     </div>
@@ -72,7 +75,7 @@
         <div class="col-lg-10 mx-auto">
           <h2>Aqui vai um breve resumo:</h2>
           <p class="lead mb-5">
-            <b>
+            <b align="justify-content-center">
               Amante de tecnologia como muitos da minha geração, mas acima de tudo, gosto de aplicá-la para tornar a vida cotidiana mais leve e rápida. Atualmente estou cursando Análise e Desenvolvimento de Sistemas pela UNIVEM (Marília-SP) e participo do programa de estágio da Leavening (Unidade de Pompeia-SP) na área de Desenvolvimento de Sistemas.
             </b>
           </p>
@@ -223,9 +226,30 @@
   </section>
 
   <!-- Map -->
-  <div id="contact" class="map">
+  <div id="mapas" class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d924.1229398982911!2d-50.174135470837975!3d-22.107218599089013!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d-22.1073105!2d-50.1736082!4m0!5e0!3m2!1spt-BR!2sbr!4v1602212000637!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <br />
+  </div>
+
+  <!-- Contact Form -->
+  <div class="container-1 body-1" id="form-contato">  
+    <form id="contact" class="contact-form" action="https://formspree.io/f/xyybezan" method="POST">
+      <h3>Envie uma mensagem preenchendo o formulário abaixo</h3>
+      <h4>Entre em contato comigo:</h4>
+      <fieldset>
+        <input placeholder="Nome" id="n-nome" type="text" tabindex="1" required >
+      </fieldset>
+      <fieldset>
+        <input placeholder="E-mail" id="n-email" type="email" tabindex="2" name="_replyto" required>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Escreva sua mensagem aqui..." id="msg" tabindex="5" name="message" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" onclick="sendEmail()" type="submit" id="contact-submit" data-submit="...Enviando">Enviar</button>
+      </fieldset>
+      <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
+    </form>
   </div>
 
   <!-- Footer -->
@@ -238,7 +262,7 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="https://github.com/iwamotojum" target="_blank">
+          <a class="social-link rounded-circle text-white mr-3" href="https://github.com/iwamotojum" target="_blank">
             <i class="icon-social-github"></i>
           </a>
         </li>
@@ -260,13 +284,16 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
 
+  
 </body>
 
 </html>
